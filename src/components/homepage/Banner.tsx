@@ -15,8 +15,8 @@ into today's plan, and watch the week's work add up.</p>
             </div>
             <div>
            <Image src={bannerr}
- height={60} 
- width={50}
+ height={200} 
+ width={200}
   alt="Logo" />
             </div>
         </div>
