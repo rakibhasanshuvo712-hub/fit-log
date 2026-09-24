@@ -9,8 +9,8 @@ const Navbar = () => {
       <div className="navbar-start">
         <Image
           src={logo}
-          height={60}
-          width={50}
+          height={40}
+          width={30}
           alt="Logo"
         />
         <h2 className="font-bold text-4xl">FITLOG</h2>

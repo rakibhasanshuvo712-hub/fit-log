@@ -13,7 +13,7 @@ EVERY SET.</h2>
 into today's plan, and watch the week's work add up.</p>
 <button className='btn btn-success'>ROWSE WORKOUTS</button>
             </div>
-            <div>
+            <div className='py-8 p-30'>
            <Image src={bannerr}
  height={350} 
  width={200}
