@@ -9,8 +9,8 @@
     
         <div className="flex items-center gap-2">
         <Image src={footer}
- height="60px" 
- width="50px"
+ height={60}
+ width={50}
   alt="Logo" />
 
           <span className="text-sm font-bold tracking-wider text-white">
