@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Workout } from "@/app/types/workout";
 import { notFound } from "next/navigation";
-import Readbutton from "@/components/bookdetails/Readbutton ";
+import SavedButton from "@/components/bookdetails/SavedButton";
 import WishlistButton from "@/components/bookdetails/WishlistButton";
 
 interface PageProps {
@@ -96,30 +96,8 @@ export default async function WorkoutDetailsPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div>
-              <h2 className="text-xl font-bold mb-4 uppercase">Instructions</h2>
-              <ol className="space-y-2 text-gray-400">
-                <li className="flex gap-3">
-                  <span className="text-lime-400 font-bold">1.</span>
-                  <span>Lie on the bench with eyes under the bar and feet planted.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime-400 font-bold">2.</span>
-                  <span>Unrack with locked elbows and lower the bar to mid-chest.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime-400 font-bold">3.</span>
-                  <span>Press up in a slight arc until elbows lock without bouncing.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-lime-400 font-bold">4.</span>
-                  <span>Keep shoulder blades pinched and a natural arch in the back.</span>
-                </li>
-              </ol>
-            </div>
-
             <div className="flex gap-4 pt-4">
-              <Readbutton workouts={workout} />
+              <SavedButton workout={workout} />
               <WishlistButton workouts={workout} />
             </div>
           </div>
