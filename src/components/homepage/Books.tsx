@@ -20,7 +20,7 @@ export default async function Books() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {workouts.map((workout) => (
         <Link
-            href={`/workouts/${workout.id}`}
+            href={`/books/${workout.id}`}
             key={workout.id}
             className="overflow-hidden rounded-xl bg-[#1a1d24] shadow-md transition hover:-translate-y-1 hover:shadow-xl" >
             <Image
@@ -70,9 +70,11 @@ export default async function Books() {
                 </span>
 
               </div>
+            
                <button className="mt-5 rounded-lg bg-lime-400 px-4 py-2 text-center font-bold text-black">
-  View Details
-</button>
+                 View Details
+               </button>
+               
 
             </div>
           </Link>

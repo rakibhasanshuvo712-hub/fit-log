@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
-import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -19,7 +18,9 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/books">Workout</Link>
+            
+           <a>Workout</a>
+          
           </li>
           <li>
             <a>My plan</a>
