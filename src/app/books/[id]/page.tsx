@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Workout } from "@/app/types/workout";
 import { notFound } from "next/navigation";
+import Readbutton from "@/components/bookdetails/Readbutton ";
+import WishlistButton from "@/components/bookdetails/WishlistButton";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -117,12 +119,8 @@ export default async function WorkoutDetailsPage({ params }: PageProps) {
             </div>
 
             <div className="flex gap-4 pt-4">
-              <button className="flex-1 bg-lime-400 text-black font-bold py-3 px-6 rounded-lg hover:bg-lime-500 transition">
-                Add to today's plan
-              </button>
-              <button className="flex-1 bg-[#1a1d24] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#252930] transition border border-gray-700">
-                Save for later
-              </button>
+              <Readbutton workouts={workout} />
+              <WishlistButton workouts={workout} />
             </div>
           </div>
         </div>
