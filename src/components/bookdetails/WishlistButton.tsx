@@ -1,13 +1,21 @@
 'use client'
 import { bookContext } from '@/context/booksContext';
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const WishlistButton = ({ workouts }: { workouts: any }) => {
     const { wishlist, setWishlist } = useContext(bookContext);
-    
+
     const handleAddtoWishList = () => {
-        console.log("read book triggered", workouts);
+        const isAlreadyExists = wishlist.some((item: any) => item.id === workouts.id);
+        
+        if (isAlreadyExists) {
+            toast.warn("This workout is already in your plan!");
+            return;
+        }
+
         setWishlist([...wishlist, workouts]);
+        toast.success("Added to today's plan successfully!");
     };
 
     return (
